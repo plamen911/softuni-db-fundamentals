@@ -1,4 +1,4 @@
-create table categories
+create table if not exists categories
 (
   id int auto_increment
     primary key,
@@ -6,7 +6,7 @@ create table categories
 )
 ;
 
-create table employees
+create table if not exists employees
 (
   id int auto_increment
     primary key,
@@ -15,18 +15,11 @@ create table employees
 )
 ;
 
-create table products
+create table if not exists products
 (
   id int auto_increment
     primary key,
   name varchar(50) not null,
-  category_id int null,
-  constraint products_categories__id_fk
-  foreign key (category_id) references categories (id)
+  category_id int null
 )
 ;
-
-create index products_categories__id_fk
-  on products (category_id)
-;
-
