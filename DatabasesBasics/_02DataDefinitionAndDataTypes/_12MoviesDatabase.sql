@@ -18,16 +18,15 @@ CREATE TABLE genres (
   notes text null
 );
 
-create table movies
-(
+create table movies (
   id int auto_increment primary key,
   title varchar(50) not null,
-  director_id int not null,
+  director_id int null,
   copyright_year year null,
   length int null,
-  genre_id int not null,
-  category_id int not null,
-  rating int null,
+  genre_id int null,
+  category_id int null,
+  rating float(10,2) null,
   notes text null,
   constraint movies_directors_id_fk
   foreign key (director_id) references directors (id),
@@ -36,6 +35,15 @@ create table movies
   constraint movies_categories_id_fk
   foreign key (category_id) references categories (id)
 );
+
+create index movies_directors_id_fk
+  on movies (director_id);
+
+create index movies_genres_id_fk
+  on movies (genre_id);
+
+create index movies_categories_id_fk
+  on movies (category_id);
 
 INSERT INTO `categories` (`id`, `category_name`, `notes`) VALUES
   (1, 'category 1', NULL),
