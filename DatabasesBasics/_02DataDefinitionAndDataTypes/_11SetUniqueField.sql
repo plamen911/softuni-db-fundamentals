@@ -1,0 +1,5 @@
+ALTER TABLE `users` CHANGE `id` `id` INT(11) NOT NULL;
+ALTER TABLE `users` DROP PRIMARY KEY;
+ALTER TABLE `users` ADD PRIMARY KEY(`id`);
+ALTER TABLE `users` ADD UNIQUE(`username`);
+
