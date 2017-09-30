@@ -3,7 +3,7 @@ create table users (
   username varchar(30) not null,
   password varchar(30) not null,
   profile_picture blob null,
-  last_login_time datetime null,
+  last_login_time timestamp null,
   is_deleted enum('0', '1') null,
   constraint users_username_uindex
   unique (username)
