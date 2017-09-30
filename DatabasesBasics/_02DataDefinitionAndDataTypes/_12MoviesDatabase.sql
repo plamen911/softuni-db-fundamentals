@@ -27,23 +27,8 @@ create table movies (
   genre_id int null,
   category_id int null,
   rating float(10,2) null,
-  notes text null,
-  constraint movies_directors_id_fk
-  foreign key (director_id) references directors (id),
-  constraint movies_genres_id_fk
-  foreign key (genre_id) references genres (id),
-  constraint movies_categories_id_fk
-  foreign key (category_id) references categories (id)
+  notes text null
 );
-
-create index movies_directors_id_fk
-  on movies (director_id);
-
-create index movies_genres_id_fk
-  on movies (genre_id);
-
-create index movies_categories_id_fk
-  on movies (category_id);
 
 INSERT INTO `categories` (`id`, `category_name`, `notes`) VALUES
   (1, 'category 1', NULL),
