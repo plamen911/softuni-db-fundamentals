@@ -1,2 +1,1 @@
-select title from books where title like 'The%' order by id;
-update books set title = concat('***', substr(title, 3)) WHERE
+SELECT REPLACE(title, 'The', '***') AS title FROM books WHERE SUBSTR(title, 1, 3) = 'The' ORDER BY id;

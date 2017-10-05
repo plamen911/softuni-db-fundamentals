@@ -1,1 +1,1 @@
-select title from books where title like 'The%' order by id;
+SELECT title FROM books WHERE title LIKE 'The%' ORDER BY id;
