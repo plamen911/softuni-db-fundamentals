@@ -4,4 +4,5 @@ SELECT
 FROM wizzard_deposits
 WHERE magic_wand_creator LIKE 'Ollivander family'
 GROUP BY deposit_group
-ORDER BY deposit_group;
+HAVING total_sum < 150000
+ORDER BY total_sum DESC;
