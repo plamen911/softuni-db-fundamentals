@@ -1,0 +1,1 @@
+SELECT first_name FROM employees WHERE department_id IN (3, 10) AND hire_date BETWEEN '1995-01-01 00:00:00' AND '2005-12-31 23:59:59';
