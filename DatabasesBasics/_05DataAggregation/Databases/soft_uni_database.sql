@@ -356,7 +356,7 @@ CREATE TABLE IF NOT EXISTS `employees` (
   `job_title` varchar(50) NOT NULL,
   `department_id` int(10) NOT NULL,
   `manager_id` int(10) DEFAULT NULL,
-  `hire_date` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6),
+  `hire_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `salary` decimal(19,4) NOT NULL,
   `address_id` int(10) DEFAULT NULL,
   PRIMARY KEY (`employee_id`),
@@ -1534,8 +1534,8 @@ CREATE TABLE IF NOT EXISTS `projects` (
   `project_id` int(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `description` text,
-  `start_date` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6),
-  `end_date` timestamp(6) NULL DEFAULT NULL,
+  `start_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `end_date` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`project_id`),
   UNIQUE KEY `PK_Projects` (`project_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=128 DEFAULT CHARSET=utf8;
