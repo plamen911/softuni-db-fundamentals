@@ -1,0 +1,2 @@
+SELECT deposit_group
+FROM wizzard_deposits
