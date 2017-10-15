@@ -1,1 +1,1 @@
-SELECT `name` FROM departments ORDER BY department_id;
+SELECT * FROM departments ORDER BY department_id;
