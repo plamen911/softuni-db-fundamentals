@@ -1,8 +1,8 @@
-CREATE FUNCTION ufn_calculate_future_value(sum DECIMAL(16, 2), yearly_interest_rate DECIMAL(16, 2), years DECIMAL(16, 2))
-  RETURNS DECIMAL(16, 2)
+CREATE FUNCTION ufn_calculate_future_value(sum DOUBLE, yearly_interest_rate DOUBLE, years DOUBLE)
+  RETURNS VARCHAR(20)
   BEGIN
     DECLARE future_value DECIMAL(16, 2);
-    SET future_value = (sum * POW(1.00 + yearly_interest_rate, years));
-    RETURN future_value;
+    SET future_value = (sum * POW(1.0 + yearly_interest_rate, years));
+    RETURN TRIM(TRAILING '.' FROM TRIM(TRAILING '0' FROM future_value));
   END
 
