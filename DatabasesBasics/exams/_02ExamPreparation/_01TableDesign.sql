@@ -102,17 +102,6 @@ CREATE TABLE `users` (
   CONSTRAINT `fk_credential_id` FOREIGN KEY (`credential_id`) REFERENCES `credentials` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-
-INSERT INTO `users` (`id`, `nickname`, `gender`, `age`, `location_id`, `credential_id`)
-VALUES
-  (1,NULL,NULL,NULL,NULL,NULL);
-
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
-UNLOCK TABLES;
-
-
 # Dump of table users_chats
 # ------------------------------------------------------------
 
