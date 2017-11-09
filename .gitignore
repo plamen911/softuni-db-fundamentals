@@ -50,3 +50,7 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 .idea
+/DatabasesAdvanced/06. DB-Advanced-Introduction-to-Hibernate-Skeleton/pom.xml
+/DatabasesAdvanced/06. DB-Advanced-Introduction-to-Hibernate-Skeleton/06. DB-Advanced-Introduction-to-Hibernate-Skeleton.iml
+/DatabasesAdvanced/06. DB-Advanced-Introduction-to-Hibernate-Skeleton/target/
+/DatabasesAdvanced/06. DB-Advanced-Introduction-to-Hibernate-Skeleton/src/test/
